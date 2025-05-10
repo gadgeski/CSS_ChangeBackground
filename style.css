@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/*==================================================
+
+BasicStyle
+
+==================================================*/
+body {
+  margin: 0;
+}
+h2 {
+  background-color: #000;
+  display: inline-block;
+  padding: 1rem;
+  color: #fff;
+}
+/*==================================================
+
+BackgroundImage
+
+==================================================*/
+/* 4枚の画像に変化する背景 */
+.bg-img {
+  background-image: ural("img/Earlgrey2025bg_1.png");
+  background-size: cover;
+  animation: change-image 15s infinite;
+  height: 80vh;
+}
+
+@keyframes change-image {
+  0%,
+  100% {
+    background-image: url("img/Earlgrey2025.png");
+  }
+  25% {
+    background-image: url("img/Earlgrey2025_2.png");
+  }
+  50% {
+    background-image: url("img/Earlgrey2025_3.png");
+  }
+  75% {
+    background-image: url("img/Earlgrey2025_4.png");
+  }
+}
+
+/* 時刻に応じた背景切り替え */
+.bg-time {
+  background-size: cover;
+  height: 80vh;
+}
+.moring {
+  background-image: url("img/Earlgrey2025_6.png");
+}
+.daytime {
+  background-image: url("img/Earlgrey2025_4.png");
+}
+.night {
+  background-image: url("img/Earlgrey2025_5.png");
+}
